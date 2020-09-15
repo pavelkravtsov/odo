@@ -105,7 +105,7 @@ def nan_to_nat(fl, **kwargs):
 
 @convert.register((pd.Timestamp, pd.Timedelta), (type(pd.NaT), type(None)))
 def convert_null_or_nat_to_nat(n, **kwargs):
-    return pd.NaT
+    raise NotImplementedError()
 
 
 @convert.register(pd.Timedelta, timedelta)
